@@ -6,9 +6,8 @@ ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
 ENV PATH $JMETER_HOME/bin:$PATH
 
 # INSTALL PRE-REQ
-RUN apt-get update && \
-    apt-get -y install \
-    wget unzip
+RUN apt-get update
+RUN apt-get -y install wget unzip
 
 # INSTALL JMETER BASE 
 RUN mkdir /jmeter
