@@ -16,7 +16,7 @@ pipeline {
       stage('push docker image') {
          steps {
             script{
-              docker.withRegistry("""https://${DOCKER_REGISTRY}""", 'publicdocker') {
+              docker.withRegistry("""https://registry.hub.docker.com""", 'publicdocker') {
                   image.push()
               }
             }
