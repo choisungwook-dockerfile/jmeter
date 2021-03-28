@@ -19,7 +19,4 @@ rm apache-jmeter-$JMETER_VERSION.tgz
 WORKDIR $JMETER_HOME 
     
 COPY scripts/install_plugin-manager.sh .
-COPY scripts/msater-entrypoint.sh /docker-entrypoint.sh
-
-RUN chmod +x install_plugin-manager.sh /docker-entrypoint.sh
-RUN sh ./install_plugin-manager.sh
+RUN bash ./install_plugin-manager.sh
