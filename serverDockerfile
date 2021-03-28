@@ -1,6 +1,5 @@
 FROM choisunguk/jmeter:base
 
 EXPOSE 1099 50000
-COPY scripts/server-entrypoint /docker-entrypoint.sh
-RUN bash /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+COPY scripts/server-entrypoint entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
