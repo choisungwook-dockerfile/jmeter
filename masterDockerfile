@@ -1,5 +1,5 @@
 FROM choisunguk/jmeter:base
 
 EXPOSE 60000
-COPY scripts/msater-entrypoint.sh entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+COPY scripts/msater-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
