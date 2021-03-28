@@ -1,7 +1,8 @@
 def DOCKER_REGISTRY = "registry.hub.docker.com"
-def TAG = "base"
+def TAG = "server"
 def DOCKER_IMAGE = "choisunguk/jmeter:${TAG}"
-def DOCKERFILE = "baseDockerfile"
+def DOCKERFILE = "serverDockerfile"
+def UPSTREAM_JOB = "jmeter-base"
 
 pipeline {
    agent any
@@ -24,6 +25,6 @@ pipeline {
               }
             }
          }
-      }       
+      }    
    }
 }
