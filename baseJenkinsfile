@@ -1,5 +1,5 @@
 def DOCKER_REGISTRY = "registry.hub.docker.com"
-def TAG = "threadgroup"
+def TAG = "base"
 def DOCKER_IMAGE = "choisunguk/jmeter:${TAG}"
 
 pipeline {

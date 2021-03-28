@@ -1,0 +1,6 @@
+FROM choisunguk/jmeter:base
+
+EXPOSE 60000
+COPY scripts/msater-entrypoint.sh /docker-entrypoint.sh
+RUN bash /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
