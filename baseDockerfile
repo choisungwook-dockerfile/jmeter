@@ -23,6 +23,3 @@ COPY scripts/msater-entrypoint.sh /docker-entrypoint.sh
 
 RUN chmod +x install_plugin-manager.sh /docker-entrypoint.sh
 RUN sh ./install_plugin-manager.sh
-
-EXPOSE 6000 1099 50000
-ENTRYPOINT ["/docker-entrypoint.sh"]
