@@ -9,7 +9,7 @@ pipeline {
       stage('build docker image') {
          steps {
             script{
-              image = docker.build("""${DOCKER_IMAGE}""", """-f ${DOCKERFILE} .""")
+              image = docker.build("""${DOCKER_IMAGE}""")
             }
          }
       }
