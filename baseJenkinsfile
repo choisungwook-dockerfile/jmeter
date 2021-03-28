@@ -5,9 +5,6 @@ def DOCKERFILE = "baseDockerfile"
 
 pipeline {
    agent any
-   triggers {
-      upstream(upstreamProjects: """${UPSTREAM_JOB}""", threshold: hudson.model.Result.SUCCESS)
-   }
    stages {
       stage('build docker image') {
          steps {
