@@ -26,7 +26,7 @@
 * serverDockerfile은 jmeter server역할을 하는 이미지
   * 컨테이너가 실행되면 server명령을 수신하기 위해 대기모드로 전환
 
-![](imgs/dockerfile_structure.png)
+![](imgs/structure.jpg)
 
 <br>
 
