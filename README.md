@@ -73,4 +73,4 @@ docker exec -it [도커 master 프로세스] jmeter -n -t /jmeter/apache-jmeter-
 <br>
 
 # 참고자료
-* [jenkins dockerfile](https://github.com/pedrocesar-ti/distributed-jmeter-docker)
+* jmeter dockerfile: https://github.com/pedrocesar-ti/distributed-jmeter-docker
