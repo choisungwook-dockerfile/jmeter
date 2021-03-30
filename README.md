@@ -1,5 +1,7 @@
 - [개요](#개요)
-- [Dockerfile 빌드 순서와 구조](#dockerfile-빌드-순서와-구조)
+- [Dockerfile 빌드 순서](#dockerfile-빌드-순서)
+  - [빌드순서](#빌드순서)
+  - [Dockerfile 소개](#dockerfile-소개)
 - [빌드 방법](#빌드-방법)
   - [base이미지](#base이미지)
   - [master이미지](#master이미지)
@@ -18,8 +20,11 @@
 
 <br>
 
-# Dockerfile 빌드 순서와 구조
+# Dockerfile 빌드 순서
+## 빌드순서
 * Dockerfile -> masterDockerfile -> serverDockrefile
+
+## Dockerfile 소개
 * Dockerfile은 jmeter와 플러그인이 설치된 이미지를 빌드
 * masterDockerfile은 jmeter master역할을 하는 이미지
   * 컨테이너가 실행되면 종료되지 않도록 tail -f /dev/null를 entrypoint로 실행
