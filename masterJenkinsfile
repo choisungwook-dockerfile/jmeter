@@ -2,13 +2,9 @@ def DOCKER_REGISTRY = "registry.hub.docker.com"
 def TAG = "master"
 def DOCKER_IMAGE = "choisunguk/jmeter:${TAG}"
 def DOCKERFILE = "masterDockerfile"
-def UPSTREAM_JOB = "jmeter-base"
 
 pipeline {
    agent any
-   triggers {
-      upstream(upstreamProjects: """${UPSTREAM_JOB}""", threshold: hudson.model.Result.SUCCESS)
-   }
    stages {
       stage('build docker image') {
          steps {
