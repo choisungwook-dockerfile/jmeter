@@ -16,7 +16,7 @@
 <br>
 
 # 개요
-* jmeter v3.3 도커라이징
+* jmeter v3.3 도커라이징(ssl 통신 비활성화)
 
 <br>
 
@@ -64,7 +64,7 @@ docker run -d --rm [도커 server이미지:server]
 ### jmeter 명령어 실행
 ```
 docker cp [도커 master 프로세스] script.jmx:/jmeter/apache-jmeter-3.3/script.jmx
-docker exec -it [도커 master 프로세스] jmeter -n -t /jmeter/apache-jmeter-3.3/script.jmx -R [server프로세스 IP]
+docker exec -it [도커 master 프로세스] jmeter -n -t /jmeter/apache-jmeter-3.3/script.jmx -Dserver.rmi.ssl.disable=true -R [server프로세스 IP]
 ```
 
 ## 쿠버네티스
